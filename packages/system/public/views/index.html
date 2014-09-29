@@ -1,3 +1,10 @@
-<section data-ng-controller="IndexController">
-  <h1 mean-token="'home-default'">This is the home view</h1>
+<section data-ng-controller = "IndexController" data-ng-init = "recent()">
+    <div class="posts" data-ng-repeat = "post in posts">
+        <div class="vote">
+    		<div class="upvote"><a>赞 ({{post.upvote}})</a></div>
+    	</div>
+    	<div class="postrow">
+        	<a class="post-title" data-ng-href="#!/posts/{{post._id}}" href="/">{{ post.title}}</a>
+    	</div>
+    </div>
 </section>
